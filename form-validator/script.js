@@ -16,40 +16,28 @@ function success(input) {
     input.className = 'form-control is-valid';
 }
 
-function validateEmail(email) {
+function checkEmail(input) {
     const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    return re.test(String(email).toLowerCase());
+    if (re.test(input.value)){
+        success(input);
+    }else{
+        error(input,'an incorrect e-mail address')
+    }
+
+}
+
+function checkRequired(inputs) {
+    inputs.forEach(function (input) {
+        if (input.value === '') {
+            error(input, `${input.id} is required`)
+        } else {
+            success(input);
+        }
+    });
 }
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-
-    if (username.value === '') {
-        error(username, 'username required');
-    } else {
-        success(username);
-    }
-
-    if (email.value === '') {
-        error(email, 'email required');
-    }
-    else if (!validateEmail(email.value)) {
-        error(email, 'enter in email format');
-    }
-    else {
-        success(email);
-    }
-
-    if (password.value === '') {
-        error(password, 'password required');
-    } else {
-        success(password);
-    }
-
-    if (repassword.value === '') {
-        error(repassword, 'repassword required');
-    } else {
-        success(repassword);
-
-    }
+    checkRequired([username, email, password, repassword]);
+    checkEmail(email);
 })
