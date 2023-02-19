@@ -6,11 +6,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Movie ticker reservation</title>
+    <title>Movie ticket reservation</title>
 </head>
 
 <body>
 
+    <div class="container">
+        <div class="screen">
+
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat reserved"></div>
+            <div class="seat reserved"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat reservd"></div>
+        </div>
+        <div class="row">
+
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat reserved"></div>
+            <div class="seat"></div>
+            <div class="seat reserved"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+    </div>
+
+    <div class="movie-list">
+        <select name="" id="movie">
+            <option disabled="true">select movie</option>
+            <option value="20">Movie 1 </option>
+            <option value="20">Movie 2</option>
+            <option value="20">Movie 3</option>
+        </select>
+    </div>
+
+    <ul class="info">
+        <li>
+            <div class="seat"> </div>
+            <small>selected</small>
+
+        </li>
+        <li>
+            <div class="seat"></div>
+            <small>empty</small>
+
+        </li>
+        <li>
+            <div class="seat"></div>
+            <small>full</small>
+
+        </li>
+    </ul>
+
+    <p class="text">
+        The fee calculated for <span id="count">3</span> seats is <span id="amount">60 $</span>
+    </p>
 
 
     <script src="script.js"></script>
